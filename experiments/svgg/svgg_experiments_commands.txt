@@ -1,0 +1,51 @@
+# All experiments should be run with 5 differents seeds:  --seed 111, --seed 222, --seed 333, --seed 444, --seed 555
+
+
+# MAZE 1
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_medium --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 2 2 --maze_type square_pbcs_0 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_hard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1.5 3 --maze_type square_pbcs_0 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_easy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 3 1.5 --maze_type square_pbcs_0 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryhard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1 5 --maze_type square_pbcs_0 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryeasy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 5 1 --maze_type square_pbcs_0 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb MEGA --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity minkde --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type square_pbcs_0 --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb GOAL_GAN --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity goal_gan --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type square_pbcs_0 --env_max_step 30
+python experiments/mega/train_svgg.py --env pointmaze --tb RANDOM --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity randkde --alpha 0. --replay_size 5000000 --device cuda --grid_eval_periodic --env_max_step 30 --maze_type square_pbcs_0
+
+# MAZE 2
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_medium --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 2 2 --maze_type square_pbcs_1 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_hard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1.5 3 --maze_type square_pbcs_1 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_easy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 3 1.5 --maze_type square_pbcs_1 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryhard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1 5 --maze_type square_pbcs_1 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryeasy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 5 1 --maze_type square_pbcs_1 --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb MEGA --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity minkde --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type square_pbcs_1 --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb GOAL_GAN --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity goal_gan --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type square_pbcs_1 --env_max_step 30
+python experiments/mega/train_svgg.py --env pointmaze --tb RANDOM --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity randkde --alpha 0. --replay_size 5000000 --device cuda --grid_eval_periodic --env_max_step 30 --maze_type square_pbcs_1
+
+
+# MAZE 3
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_medium --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 2 2 --maze_type snail --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_hard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1.5 3 --maze_type snail --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_easy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 3 1.5 --maze_type snail --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryhard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1 5 --maze_type snail --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryeasy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 5 1 --maze_type snail --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb MEGA --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity minkde --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type snail --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb GOAL_GAN --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity goal_gan --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type snail --env_max_step 30
+python experiments/mega/train_svgg.py --env pointmaze --tb RANDOM --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity randkde --alpha 0. --replay_size 5000000 --device cuda --grid_eval_periodic --env_max_step 30 --maze_type snail
+
+
+# MAZE 4
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_medium --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 2 2 --maze_type snake --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_hard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1.5 3 --maze_type snake --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_easy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 3 1.5 --maze_type snake --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryhard --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 1 5 --maze_type snake --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb SVGG_veryeasy --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity svgg --replay_size 5000000 --device cuda --grid_eval_periodic --alpha_beta 5 1 --maze_type snake --use_prior True --no_ag_kde --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb MEGA --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity minkde --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type snake --env_max_step 30
+python experiments/svgg/train_svgg.py --env pointmaze --tb GOAL_GAN --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity goal_gan --replay_size 5000000 --device cuda --grid_eval_periodic --maze_type snake --env_max_step 30
+python experiments/mega/train_svgg.py --env pointmaze --tb RANDOM --max_steps 5000000 --seed 111 --first_visit_succ --ag_curiosity randkde --alpha 0. --replay_size 5000000 --device cuda --grid_eval_periodic --env_max_step 30 --maze_type snake
+
+
+# Fetch Pick and Place (Hard Version)
+python experiments/mega/train_svgg.py --env pickplace_obj_obj --pp_in_air_percentage 1. --hard --tb SVGG_medium --max_steps 5000000 --seed 111 --ag_curiosity svgg --replay_size 5000000 --optimize_every 4 --device cuda --use_prior True --goal_predict True --her rfaab_1_3_2_1_3 --sp_layers 128 128 --k_steps 100 --oe_part 5 --nb_particles 40
+python experiments/mega/train_svgg.py --env pickplace_obj_obj --pp_in_air_percentage 1. --hard --tb GOAL_GAN --max_steps 5000000 --seed 111 --ag_curiosity goal_gan --sp_layers 128 128 --k_steps 120 --replay_size 5000000 --her rfaab_1_3_2_1_3 --device cuda --optimize_every 4 --goal_predict True
+python experiments/mega/train_svgg.py --env pickplace_obj_obj --pp_in_air_percentage 1. --hard --tb MEGA --max_steps 5000000 --seed 111 --ag_curiosity minkde --replay_size 5000000 --device cuda:0 --optimize_every 4 --her rfaab_1_3_2_1_3
+python experiments/mega/train_svgg.py --env pickplace_obj_obj --pp_in_air_percentage 1. --hard --tb RANDOM --max_steps 5000000 --seed 111 --device cuda --ag_curiosity randkde --alpha 0. --replay_size 5000000 --optimize_every 4 --her rfaab_1_3_2_1_3
