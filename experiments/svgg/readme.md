@@ -1,25 +1,35 @@
-# Maximum Entropy Gain Exploration for Long Horizon Multi-goal Reinforcement Learning
+# Stein Variational Goal Generation for Hard Exploration Reinforcement Learning Problems
 
-### [Silviu Pitis](https://silviupitis.com)\*, [Harris Chan](https://takonan.github.io/)\*, Stephen Zhao, Bradly Stadie, Jimmy Ba
 
-This is code for replicating our [ICML 2020 paper](https://arxiv.org/abs/2007.02832). See also the [ALA 2020 presentation (25 minutes, best paper)](https://underline.io/lecture/544-maximum-entropy-gain-exploration-for-long-horizon-multi-goal-reinforcement-learning).
+### Nicolas Castanet, Sylvain Lamprier, Olivier Sigaud
 
-See the `mrl` [readme](https://github.com/spitis/mrl) for general instructions. 
+This is code for replicating our (https://arxiv.org/abs/2206.06719).
 
-The launch commands used for the main experiments are in `commands_for_experiments.txt`, which call the `train_mega.py` launch script. 
+The launch commands used for the main experiments are in `svgg_experiments_commands.txt`, which call the `train_svgg.py` launch script. 
 
-To run a MEGA agent use `--ag_curiosity minkde`. To use OMEGA use `--transition_to_dg`. The actual implementation of MEGA is the `DensityAchievedGoalCuriosity` from `mrl.modules.curiosity`, which assumes the agent has a density module from `mrl.modules.density` (KDE / Flow / RND).
+To run a SVGG agent use `--ag_curiosity svgg`. To use OMEGA use `--transition_to_dg`. The actual implementation of SVGG is the `SvgdEntropy` from `mrl.modules.curiosity`.
 
-While the paper experiments use the `protoge_config` from `mrl.configs.continuous_off_policy.py`, please note that the `best_slide_config` hparams with `--optimize_every 10 --her rfaab_1_5_2_1_1` are much more stable for Stack (and likely FPP, etc.).
 
 
 ### Bibtex
 
 ```
-@inproceedings{pitis2020mega,
-  title={Maximum Entropy Gain Exploration for Long Horizon Multi-goal Reinforcement Learning},
-  author={Pitis, Silviu and Chan, Harris and Zhao, Stephen and Stadie, Bradly and Ba, Jimmy},
-  booktitle={Proceedings of the Thirty-seventh International Conference on Machine Learning},
-  year={2020}
+@misc{https://doi.org/10.48550/arxiv.2206.06719,
+  doi = {10.48550/ARXIV.2206.06719},
+  
+  url = {https://arxiv.org/abs/2206.06719},
+  
+  author = {Castanet, Nicolas and Lamprier, Sylvain and Sigaud, Olivier},
+  
+  keywords = {Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Stein Variational Goal Generation For Reinforcement Learning in Hard Exploration Problems},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution 4.0 International}
 }
+
 ```
